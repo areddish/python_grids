@@ -2,7 +2,7 @@
 
 ## Problem #1
 
-### [Tic-Tac-Toe](https://github.com/areddish/python_grids/tic-tac-toe)
+### [Tic-Tac-Toe](https://github.com/areddish/python_grids/tree/master/tic-tac-toe)
 
 Given a Tic-Tac-Toe board, determine who won:
 
@@ -18,7 +18,7 @@ board1 = [ ["X", "O", "X"],
 
 ## Problem #2
 
-### [Spreadsheets](https://github.com/areddish/python_grids/spreadsheet)
+### [Spreadsheets](https://github.com/areddish/python_grids/tree/master/spreadsheet)
 
 Given a spreadsheet, fill in the formula:
 
@@ -36,7 +36,7 @@ Phone      Part #     Qty        Price      Profit
 
 ## Problem #3
 
-### [Maze](https://github.com/areddish/python_grids/maze)
+### [Maze](https://github.com/areddish/python_grids/tree/master/maze)
 
 Given a maze, determine if you can move from start (_S_) to end (_E_) navigating around the walls (_#_)
 
