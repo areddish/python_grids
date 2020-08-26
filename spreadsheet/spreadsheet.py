@@ -19,6 +19,8 @@ def print_grid(grid):
 # 
 # Write code to scan and find the formulas and replace them with the 
 # correct values.
+# A '*' in a cell means you should replace it's value with the multiplicate of the two cells before it in the row.
+# A '+' in a cell means you should replace it's value with the sum of all of the values above it.
 
 # Print out the grid so we see the answer
 print_grid(grid)
