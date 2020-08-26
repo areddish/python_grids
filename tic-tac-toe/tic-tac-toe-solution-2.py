@@ -29,19 +29,30 @@ def output_board(b):
             
 
 def find_winner(board, x, y, winning_length=3):
-    # Start with a count of 1, the piece that was just played
-    match_count = 1
+    # Start with a count of 0, check all of the diagnoals
+    match_count = 0
 
-    # Diagonal    
+    # Diagonal Down [0][0], [1][1], [2][2] as a 3x3 example
     for j in range(winning_length):
-        for i in range(winning_length):
-            if board[i][j] == board[y][x]:
-                match_count += 1
+        if board[j][j] == board[y][x]:
+            match_count += 1
+
+    if match_count == winning_length:
+        return board[y][x]
+
+    # Diagonal Up [2][0], [1][1], [0][2] as a 3x3 example
+    match_count = 0
+    for j in range(winning_length):
+        if board[winning_length - 1 - j][j] == board[y][x]:
+            match_count += 1
 
     if match_count == winning_length:
         return board[y][x]
 
     # Horizontal
+
+    # From now one we start at a count of 1, since the piece that was just played
+    # is already counted, just look around.
     match_count = 1
     current_x = x
     while (current_x > 0 and board[y][current_x-1] == board[y][x]):

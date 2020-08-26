@@ -18,14 +18,18 @@ board4 = [ ["O", "X", "O"],
            ["X", "X", "X"],
            ["O", "O", " "] ]
 
-def output_board(b):
-    for y in range(3):
-        for x in range(3):
+def output_board(b, winner):
+    width = len(b[0])
+    height = len(b)
+    for y in range(height):
+        for x in range(width):
             print(b[y][x], end="")
-            if x < 2:
+            if x < width-1:
                 print("|", end="")
+            if y == height//2 and x == width -1:
+                print("\t\tWinner is:", winner, end="")
         print()
-        print("-+-+-" if y < 2 else "")
+        print("-+-+-" if y < height-1 else "")
             
 
 def check_winner(board):
@@ -53,7 +57,7 @@ def check_winner(board):
 
 
 # Test cases
-print("board1 winner is", check_winner(board1), "It should be", "X")
-print("board2 winner is", check_winner(board2), "It should be", "O")
-print("board3 winner is", check_winner(board3), "It should be", "Draw")
-print("board4 winner is", check_winner(board4), "It should be", "X")
+output_board(board1, check_winner(board1))  # Should be X wins
+output_board(board2, check_winner(board2))  # Should be O wins
+output_board(board3, check_winner(board3))  # Should be Draw
+output_board(board4, check_winner(board4))  # Should be X wins

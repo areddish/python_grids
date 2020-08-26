@@ -1,10 +1,8 @@
 def find(grid, ch):
     width = len(grid[0])
     height = len(grid)
-    print(width,height)
     for y in range(height):
         for x in range(width):
-            print(x,y)
             if grid[y][x] == ch:
                 return (x,y)
 
@@ -15,7 +13,7 @@ def print_grid(grid):
     height = len(grid)
     for y in range(height):
         for x in range(width):
-            print(grid[y][x],end="")
+            print('▓' if grid[y][x] == '#' else grid[y][x],end="")
         print()
 
 def get_at(grid, x, y):
@@ -36,12 +34,11 @@ def load_grid(filename):
 
 # find Ending!
 def solve(grid, start, end, path=[]):
-    cur = start
     # try to move in +
     moves = [ (-1, 0), (1,0), (0,-1), (0,1)]
     for move in moves:
-        nx = cur[0] + move[0]
-        ny = cur[1] + move[1]
+        nx = start[0] + move[0]
+        ny = start[1] + move[1]
         new_move = (nx,ny)
 
         # Don't walk back down the path we came, we've already explored it.
@@ -75,7 +72,6 @@ if __name__ == "__main__":
     end = find(grid, "E")
 
     solution = solve(grid,start, end)
-    print(solution)
 
     import time
     import os
