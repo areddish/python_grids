@@ -1,5 +1,7 @@
 # Code With Me Meetup on Grids using Python
 
+Slides can be downloaded [here](https://github.com/areddish/python_grids/raw/master/Presentation.pptx)
+
 ## Problem #1
 
 ### [Tic-Tac-Toe](https://github.com/areddish/python_grids/tree/master/tic-tac-toe)
