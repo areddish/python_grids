@@ -32,10 +32,10 @@ def load_grid(filename):
 
     return grid
 
-# find Ending!
+# Find Path
 def solve(grid, start, end, path=[]):
     # try to move in +
-    moves = [ (-1, 0), (1,0), (0,-1), (0,1)]
+    moves = [(-1, 0), (1,0), (0,-1), (0,1)]
     for move in moves:
         nx = start[0] + move[0]
         ny = start[1] + move[1]

@@ -20,7 +20,9 @@ def column_window(grid, column, start,stop):
 # Formula implementations
 def mul(grid, x, y):
     return str(float(grid[y][x-2]) * float(grid[y][x-1]))
+
 def add(grid, x, y):
+    # assume a header
     return str(sum(column_window(grid, x, 1, y)))
 
 # Iterate over grid and fill in formulas
